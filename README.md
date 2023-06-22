@@ -1,2 +1,2 @@
 # my_learning
-this iis my temp repo for communication
+this is my temp repo for communication
