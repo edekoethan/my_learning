@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Table with different background colors for even, odd, and prime numbers</title>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+
+    td {
+      border: 1px solid black;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+  <table id="myTable"></table>
+  <script>
+    function isPrime(num) {
+      if (num <= 1) return false;
+      if (num <= 3) return true;
+      if (num % 2 === 0 || num % 3 === 0) return false;
+      let i = 5;
+      while (i * i <= num) {
+        if (num % i === 0 || num % (i + 2) === 0) return false;
+        i += 6;
+      }
+      return true;
+    }
+
+    const numColumns = 6;
+    const endNumber = 101;
+    const numRows = Math.ceil(endNumber / numColumns);
+    const tableElement = document.getElementById('myTable');
+
+    for (let row = 0; row < numRows; row++) {
+      const newRow = document.createElement('tr');
+
+      for (let column = 0; column < numColumns; column++) {
+        const tableDataElement = document.createElement('td');
+        const cellValue = row * numColumns + column;
+
+        if (cellValue <= endNumber) {
+          tableDataElement.textContent = cellValue;
+
+          if (cellValue % 2 === 0) {
+            tableDataElement.style.backgroundColor = 'green';
+          } else {
+            tableDataElement.style.backgroundColor = 'yellow';
+          }
+
+          if (isPrime(cellValue)) {
+            tableDataElement.style.backgroundColor = 'red';
+          }
+        } else {
+          break; // Stop adding cells once we reach the endNumber
+        }
+
+        newRow.appendChild(tableDataElement);
+      }
+
+      tableElement.appendChild(newRow);
+    }
+  </script>
+</body>
+</html>
+

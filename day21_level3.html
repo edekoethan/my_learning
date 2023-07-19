@@ -1,0 +1,88 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript for Everyone:DOM</title>
+  </head>
+  <body>
+    <div class="wrapper">
+        <h1>Asabeneh Yetayeh challenges in <span id="year">2020</span></h1> <!--added a span element-->
+        <h2>30DaysOfJavaScript Challenge</h2>
+        <h3></h3>
+        <ul>
+            <li>30DaysOfPython Challenge Done</li>
+            <li>30DaysOfJavaScript Challenge Ongoing</li>
+            <li>30DaysOfReact Challenge Coming</li>
+            <li>30DaysOfFullStack Challenge Coming</li>
+            <li>30DaysOfDataAnalysis Challenge Coming</li>
+            <li>30DaysOfReactNative Challenge Coming</li>
+            <li>30DaysOfMachineLearning Challenge Coming</li>
+        </ul>
+    </div>
+
+    <script>
+//completed challenge has background green
+//Ongoing challenge has background yellow
+//Coming challenges have background red
+
+const challengeStage = document.querySelectorAll("li")
+challengeStage.forEach((stage, i) => {
+  if ( i === 0){
+    stage.style.backgroundColor = "green"
+  }
+
+  else if ( i === 1){
+    stage.style.backgroundColor = "yellow"
+  }
+  else {
+    stage.style.backgroundColor = "red"
+  }
+});
+
+const yearElement = document.getElementById('year')
+yearElement.style.fontSize = "50px"
+//console.log(changeYearColor)
+
+//function to generate a random color
+function getRandomColor(){
+    const letters = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+}
+
+//function to change year color
+
+function changeColorText(){
+    const color = getRandomColor();
+    yearElement.style.color = color
+}
+
+//function to add date
+const addConntent = document.querySelector('h3')
+const now = new Date()
+const year = now.getFullYear() // return year
+const month = now.getMonth() + 1 // return month(0 - 11)
+const date = now.getDate() // return date (1 - 31)
+const hours = now.getHours() // return number (0 - 23)
+const minutes = now.getMinutes() // return number (0 -59)
+addConntent.textContent = `${date}/${month}/${year} ${hours}:${minutes}`
+
+//function to change date color
+
+function changeColorDate(){
+    const date = getRandomColor();
+    addConntent.style.backgroundColor = date
+
+}
+
+//set interval to apply changes
+setInterval(changeColorText, 1000)
+setInterval(changeColorDate, 1000)
+
+
+    </script>
+  </body>
+</html>

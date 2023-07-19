@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model:30 Days Of JavaScript</title>
+</head>
+<body>
+    <h1>Key events : Press any key </h1>
+    <p></p>
+
+    <script>
+        const p = document.querySelector('p')
+        document.body.addEventListener('keypress', e =>{
+            p.textContent = `You pressed ${e.key} \n${e.keyCode}`
+        })
+    </script>
+</body>
+</html>

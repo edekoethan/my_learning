@@ -1,0 +1,35 @@
+#slider {
+    width: 50px%;
+    height: 50px%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    width: 50px%;
+    height: 50px%;
+    display: none;
+}
+
+.slide img {
+    width: 50px%;
+    height: 50px%;
+    object-fit: cover;
+}
+
+.arrow-left, .arrow-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3em;
+    color: white;
+    cursor: pointer;
+}
+
+.arrow-left {
+    left: 10px;
+}
+
+.arrow-right {
+    right: 10px;
+}

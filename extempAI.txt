@@ -1,0 +1,10 @@
+<form id="extemporaneous-form">
+  <label for="patient-weight">Patient Weight (kg):</label><br>
+  <input type="number" id="patient-weight" name="patient-weight"><br>
+  <label for="desired-dose">Desired Dose (mg):</label><br>
+  <input type="number" id="desired-dose" name="desired-dose"><br>
+  <label for="available-strength">Available Strength (mg/mL):</label><br>
+  <input type="number" id="available-strength" name="available-strength"><br>
+  <button type="submit">Calculate</button>
+</form> 
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class = "paragraph" id = 'p1'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt voluptatum id tempore sit doloremque labore quos eos dolorum tenetur sunt ullam repudiandae quidem, perspiciatis accusamus ab accusantium quaerat non necessitatibus!</p>
+    <p class = "paragraph" id = 'p2'> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui, tenetur et quibusdam eius error dolore minus architecto quaerat sequi voluptatibus eligendi numquam incidunt odio! Illo iure laborum repellat fuga temporibus?</p>
+    <p class = "paragraph" id = 'p3'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque et dolorum voluptatem, debitis perferendis explicabo provident sapiente fugiat laudantium qui. Eos, impedit itaque. Assumenda consequuntur commodi alias est sint odio.</p>
+    <p class = "paragraph" id = 'p4'> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate deleniti voluptatum quos veniam accusamus aliquid. Eveniet, voluptatum sunt ratione laboriosam harum odio assumenda, delectus ducimus officia, alias suscipit laudantium corrupti.</p>
+<script>
+//Create an index.html file and put four p elements as above: Get the first paragraph by using document.querySelector(tagname) and tag name
+ const firstParagraph = document.querySelector('.paragraph')
+ console.log(firstParagraph)
+//Get each of the the paragraph using document.querySelector('#id') and by their id
+ const firstParagraph2 = document.querySelector('#p1')
+ console.log(firstParagraph2)
+//Get all the p as nodeList using document.querySelectorAll(tagname) and by their tag name
+ const allParagraph = document.querySelectorAll('.paragraph')
+ console.log(allParagraph)
+//Loop through the nodeList and get the text content of each paragraph
+ const getContents = document.querySelectorAll('p')
+//console.log(getContents)
+ getContents.forEach((paragraph) => {
+    console.log(paragraph)
+ } )
+//Set a text content to paragraph the fourth paragraph,Fourth Paragraph
+ const addConntent = document.querySelector('#p4')
+ addConntent.textContent = 'Fourth paragraph'
+
+//Set id and class attribute for all the paragraphs using different attribute setting methods
+ const setAttributes  = document.querySelectorAll('p')
+ setAttributes.forEach((paragraph) => {
+   paragraph.setAttribute('class', 'title')
+ })
+
+ // level 2
+//Change stye of each paragraph using JavaScript(eg. color, background, border, font-size, font-family)
+
+const changeStyleSame = document.querySelectorAll('p')
+changeStyleSame.forEach((paragraph) => {
+//paragraph.style.fontSize = "18px"
+//paragraph.style.color = "blue"
+//paragraph.style.fontFamily = "calibiri"
+//paragraph.style.backgroundColor = "blue"
+
+})
+
+/*Select all paragraphs and loop through each elements
+*and give the first and third paragraph a color of green
+*and the second and the fourth paragraph a red color
+*/
+const changeStyleDiffer  = document.querySelectorAll('p')
+ changeStyleDiffer.forEach((paragraph, i) => {
+  if ( i % 2 === 0){
+    paragraph.style.color = "red"
+  }
+  else {
+    paragraph.style.color = "green"
+  }
+ })
+
+ 
+/*Select all paragraphs and loop through each elements
+*Set id and class attribute for 
+*all the paragraphs using different attribute setting methods
+*/
+//see above
+
+</script>
+</body>
+</html>

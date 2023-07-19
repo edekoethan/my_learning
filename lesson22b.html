@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document Object Model:30 Days Of JavaScript</title>
+</head>
+
+<body>
+    <h1>Removing child Node</h1>
+    <h2>Asabeneh Yetayeh challenges in 2020</h1>
+    <ul>
+        <li>30DaysOfPython Challenge Done</li>
+        <li>30DaysOfJavaScript Challenge Done</li>
+        <li>30DaysOfReact Challenge Coming</li>
+        <li>30DaysOfFullStack Challenge Coming</li>
+        <li>30DaysOfDataAnalysis Challenge Coming</li>
+        <li>30DaysOfReactNative Challenge Coming</li>
+        <li>30DaysOfMachineLearning Challenge Coming</li>
+    </ul>
+
+    <script>
+       /*const ul = document.querySelector('ul') //reference the ul first
+       const lists = document.querySelectorAll('li') //before referencing the li
+       for (const list of lists){
+        ul.removeChild(list)
+       }
+*/
+       //As we have see in the previous section there 
+       //is a better way to eliminate all the inner 
+       //HTML elements or the children of a parent 
+       //element using the method innerHTML properties.
+
+ul = document.querySelector('ul')
+ul.innerHTML = ''
+
+
+
+    </script>
+</body>
+
+</html>
